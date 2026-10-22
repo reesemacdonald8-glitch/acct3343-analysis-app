@@ -12,7 +12,7 @@ st.title("StockScope 📊")
 st.subheader("Discover the Warning Signs Behind Every Stock")
 
 st.write(
-    "Analyze 684 companies using key financial indicators, including "
+    "Analyze companies using key financial indicators, including "
     "Gross Profitability (GPA), Sloan Accruals (STA), and Book-to-Market (B/M). "
     "Customize screening criteria, uncover potential financial weaknesses, "
     "and identify stocks that may be candidates for selling."
