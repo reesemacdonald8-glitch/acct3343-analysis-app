@@ -124,3 +124,61 @@ st.download_button(
     "sell_candidates.csv",
     "text/csv"
 )
+
+
+
+# Investment Conclusions
+st.header("Investment Conclusions")
+
+st.write(
+    "The following companies are potential SELL candidates "
+    "based on the financial screening thresholds selected."
+)
+
+if sell.empty:
+    st.info("No companies currently meet the SELL criteria.")
+else:
+    top_candidates = sell.sort_values(
+        "Warning Signals", ascending=False
+    ).head(5)
+
+    for _, company in top_candidates.iterrows():
+        st.subheader(
+            f"{company['ticker']} - {company['company']}"
+        )
+
+        reasons = []
+
+        if company["Low GPA"]:
+            reasons.append(
+                "Low gross profitability may indicate "
+                "weaker operating performance."
+            )
+
+        if company["High STA"]:
+            reasons.append(
+                "High Sloan accruals may suggest earnings "
+                "are less supported by operating cash flow."
+            )
+
+        if company["Low B/M"]:
+            reasons.append(
+                "Low book-to-market may indicate a "
+                "relatively high market valuation."
+            )
+
+        st.write(
+            f"**Warning Signals: {company['Warning Signals']}**"
+        )
+
+        for reason in reasons:
+            st.write("- " + reason)
+
+        st.write(
+            "**Conclusion:** This company warrants further "
+            "investigation as a potential SELL candidate. "
+            "These screening signals alone do not prove "
+            "that the stock is overvalued."
+        )
+
+        st.divider()
