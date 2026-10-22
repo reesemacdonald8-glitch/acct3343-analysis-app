@@ -92,6 +92,13 @@ st.dataframe(
     use_container_width=True
 )
 
+st.subheader("📊 Potential SELL Candidates by Sector")
+
+if not sell.empty:
+    sector_counts = sell["sector"].value_counts()
+    st.bar_chart(sector_counts)
+else:
+    st.info("No SELL candidates match the current filters.")
 st.subheader("Financial Warning Signal Breakdown")
 
 st.bar_chart(
