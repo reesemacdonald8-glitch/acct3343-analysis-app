@@ -9,6 +9,21 @@ st.set_page_config(
 )
 st.markdown("""
 <style>
+/* Make financial metric titles white */
+[data-testid="stMetricLabel"],
+[data-testid="stMetricLabel"] p {
+    color: #F1F5F9 !important;
+    }
+/* Make sidebar filter labels white */
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] label p {
+    color: #F1F5F9 !important;
+}
+/* Improve general text readability */
+.stApp p {
+    color: #E2E8F0;
+}
+
     .stApp {
         background-color: #0B1426;
         color: #F1F5F9;
