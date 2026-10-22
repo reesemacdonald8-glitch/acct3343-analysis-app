@@ -8,10 +8,14 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("📊 StockScope | Stock Analysis Dashboard")
+st.title("StockScope 📊")
+st.subheader("Discover the Warning Signs Behind Every Stock")
+
 st.write(
-    "Interactive financial screening tool for identifying "
-    "potentially overvalued stocks."
+    "Analyze 684 companies using key financial indicators, including "
+    "Gross Profitability (GPA), Sloan Accruals (STA), and Book-to-Market (B/M). "
+    "Customize screening criteria, uncover potential financial weaknesses, "
+    "and identify stocks that may be candidates for selling."
 )
 
 @st.cache_data
