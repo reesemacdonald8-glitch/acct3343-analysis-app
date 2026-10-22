@@ -7,7 +7,33 @@ st.set_page_config(
     page_icon="📊",
     layout="wide"
 )
+st.markdown("""
+<style>
+    .stApp {
+        background-color: #0B1426;
+        color: #F1F5F9;
+    }
 
+    h1, h2, h3 {
+        color: #E2E8F0 !important;
+    }
+
+    [data-testid="stSidebar"] {
+        background-color: #14233B;
+    }
+
+    [data-testid="stMetric"] {
+        background-color: #1B2D49;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #34547A;
+    }
+
+    [data-testid="stMetricValue"] {
+        color: #60A5FA;
+    }
+</style>
+""", unsafe_allow_html=True)
 st.title("StockScope 📊")
 st.subheader("Discover the Warning Signs Behind Every Stock")
 
