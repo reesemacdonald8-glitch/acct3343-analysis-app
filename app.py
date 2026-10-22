@@ -3,12 +3,12 @@ import streamlit as st
 import pandas as pd
 
 st.set_page_config(
-    page_title="Stock SHORT Analysis",
-    page_icon="📉",
+    page_title="StockScope",
+    page_icon="📊",
     layout="wide"
 )
 
-st.title("📉 Stock SHORT Analysis App")
+st.title("📊 StockScope | Stock Analysis Dashboard")
 st.write(
     "Interactive financial screening tool for identifying "
     "potentially overvalued stocks."
